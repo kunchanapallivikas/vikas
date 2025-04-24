@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You, Cutie</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      color: white;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+    }
+
+    #photoContainer {
+      display: block;
+    }
+
+    #photo {
+      max-width: 90vw;
+      max-height: 70vh;
+      border-radius: 20px;
+      box-shadow: 0 0 20px orange;
+    }
+
+    #tapText {
+      margin-top: 15px;
+      font-size: 20px;
+      color: orange;
+    }
+
+    #imageContainer {
+      display: none;
+    }
+
+    #imageContainer img {
+      max-width: 90vw;
+      max-height: 80vh;
+      border-radius: 20px;
+      box-shadow: 0 0 20px orange;
+    }
+
+    #notMobile {
+      display: none;
+    }
+  </style>
+</head>
+<body onclick="handleTap()">
+  <div id="photoContainer">
+    <img id="photo" src="images/photo.jpg" alt="You're supposed to see something lovely here 💕">
+    <div id="tapText">tap to open it cutie</div>
+  </div>
+
+  <div id="imageContainer">
+    <img src="images/second-photo.jpg" alt="Second surprise just for you 💖">
+  </div>
+
+  <script>
+    function handleTap() {
+      document.getElementById('photoContainer').style.display = 'none';
+      document.getElementById('imageContainer').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
